@@ -8,166 +8,169 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
-	* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .header {
-            background: #fff;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-bottom: 4px solid #ff7700;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            height: 50px;
-            margin-right: 15px;
-        }
-        
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: #ff7700;
-        }
-        
-        .nav {
-            display: flex;
-            gap: 25px;
-        }
-        
-        .nav a {
-            color: #555;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 16px;
-        }
-        
-        .nav a:hover {
-            color: #ff7700;
-        }
-        
-        .nav a.active {
-            color: #ff7700;
-            border-bottom: 2px solid #ff7700;
-        }
-        
-    body {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        min-height: 100vh;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #FFF8F0;
+    min-height: 100vh;
+    color: #333333;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #FF6B00;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF6B00;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav a.active {
+    color: #FF6B00;
+    border-bottom: 2px solid #FF6B00;
+}
+
+.nav a:hover {
+    color: #FF4500;
+}
+
+/* Registration Card */
+.registration-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.registration-header {
+    background: #FF6B00;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.input-with-icon input {
+    padding-left: 35px;
+}
+
+.btn-primary {
+    background-color: #FF6B00;
+    border-color: #FF6B00;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #FF4500;
+    border-color: #FF4500;
+}
+
+/* Footer */
+.footer {
+    background: #FFF8F0;
+    padding: 30px 40px;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+    margin-top: auto;
+    color: #555;
+    font-size: 14px;
+}
+
+.iitb-logo {
+    height: 30px;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
     }
-    .registration-card {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        overflow: hidden;
-    }
-    .registration-header {
-        background: #ff7700;
-        color: #fff;
-        padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
         text-align: center;
+        padding: 15px 20px;
     }
-    .input-with-icon {
-        position: relative;
+    .logo-container {
+        margin-bottom: 15px;
     }
-    .input-with-icon i {
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #6c757d;
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    .input-with-icon input {
-        padding-left: 35px;
+    .action-buttons {
+        flex-direction: column;
     }
-    .btn-primary {
-        background-color: #ff7700;
-        border-color: #ff7700;
-        font-weight: 600;
-    }
-    .btn-primary:hover {
-        background-color: #e65c00;
-        border-color: #e65c00;
-    }
-    .footer {
-            background: #f8f9fa;
-            padding: 30px 40px;
-            text-align: center;
-            border-top: 1px solid #dee2e6;
-            margin-top: auto;
-            color: #6c757d;
-        }
-        
-        .iitb-logo {
-            height: 30px;
-            margin-right: 2px;
-            margin-left: 4px;
-            vertical-align: middle;
-        }
-        
-        .copyright {
-            color: #6c757d;
-            font-size: 14px;
-        }
-        
-        @media (max-width: 992px) {
-            .main-container {
-                flex-direction: column;
-            }
-            
-            .filters-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-                padding: 15px 20px;
-            }
-            
-            .logo-container {
-                margin-bottom: 15px;
-            }
-            
-            .nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-            }
-        }
+}
 </style>
 </head>
 <body>
 
+<!-- Header -->
 <div class="header">
-        <div class="logo-container">
-            <img src="https://fossee.in/sites/all/themes/software_responsive_theme/img/logo.png" alt="FOSSEE Logo" class="logo">
-            <div class="logo-text">FOSSEE Workshops</div>
-        </div>
-        <div class="nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="statistics.html">Workshop Statistics</a>
-        </div>
+    <div class="logo-container">
+        <img src="https://fossee.in/sites/all/themes/software_responsive_theme/img/logo.png" alt="FOSSEE Logo" class="logo">
+        <div class="logo-text">FOSSEE Workshops</div>
     </div>
+    <div class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="statistics.html">Workshop Statistics</a>
+    </div>
+</div>
 
+<!-- Registration Form -->
 <main class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-md-12">
@@ -178,12 +181,12 @@
                 <div class="p-4">
                     <form id="registerForm">
                         <div class="row g-3">
+                            <!-- Username & Email -->
                             <div class="col-md-6">
                                 <label for="username" class="form-label">Username *</label>
                                 <div class="input-with-icon">
                                     <i class="fas fa-user"></i>
                                     <input type="text" class="form-control" id="username" placeholder="Enter username" required>
-                                    
                                 </div>
                                 <span class="helptext">Letters, digits, periods and underscore only.</span>
                             </div>
@@ -194,7 +197,8 @@
                                     <input type="email" class="form-control" id="email" placeholder="Enter email" required>
                                 </div>
                             </div>
-                            
+
+                            <!-- Password & Confirm -->
                             <div class="col-md-6">
                                 <label for="password" class="form-label">Password *</label>
                                 <div class="input-with-icon">
@@ -210,6 +214,7 @@
                                 </div>
                             </div>
 
+                            <!-- Personal Details -->
                             <div class="col-md-3">
                                 <label for="title" class="form-label">Title *</label>
                                 <select id="title" class="form-select" required>
@@ -232,6 +237,7 @@
                                 <input type="text" id="last-name" class="form-control" placeholder="Last Name" required>
                             </div>
 
+                            <!-- Contact & Institute -->
                             <div class="col-md-6">
                                 <label for="phone" class="form-label">Phone Number *</label>
                                 <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
@@ -242,21 +248,21 @@
                                 <span class="helptext">Please write full name of your Institute/Organization</span>
                             </div>
 
+                            <!-- Department & Location -->
                             <div class="col-md-6">
                                 <label for="department" class="form-label">Department *</label>
                                 <select id="department" class="form-select" required>
                                     <option value="">Select</option>
-                                    <option value= "computer engineering">Computer Science</option>
-                                    <option value ="information technology">Information Technology</option>
-                                    <option value ="civil engineering"
+                                    <option>Computer Science</option>
+                                    <option>Information Technology</option>
                                     <option>Civil Engineering</option>
-                                    <option value ="electrical engineering">Electrical Engineering</option>
-                                    <option value ="mechanical engineering">Mechanical Engineering</option>
-                                    <option value ="chemical engineering">Chemical Engineering</option>
-                                    <option value ="aerospace engineering">Aerospace Engineering</option>
-                                    <option value ="bioscience and bioengineering">Bioscience and BioEngineering</option>
-                                    <option value ="electronics">Electronics</option>
-                                    <option value ="energy science and engineering">Energy Science and Engineering</option>
+                                    <option>Electrical Engineering</option>
+                                    <option>Mechanical Engineering</option>
+                                    <option>Chemical Engineering</option>
+                                    <option>Aerospace Engineering</option>
+                                    <option>Bioscience and BioEngineering</option>
+                                    <option>Electronics</option>
+                                    <option>Energy Science and Engineering</option>
                                 </select>
                                 <span class="helptext">Department you work/study</span>
                             </div>
@@ -265,59 +271,61 @@
                                 <input type="text" id="location" class="form-control" placeholder="City/Place" required>
                             </div>
 
+                            <!-- State & Referral -->
                             <div class="col-md-6 mb-3">
-  <label for="state" class="form-label required">State</label>
-  <select class="form-select" id="state" required>
-    <option selected disabled value="">Select State</option>
-    <option value="Andhra Pradesh">Andhra Pradesh</option>
-    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-    <option value="Assam">Assam</option>
-    <option value="Bihar">Bihar</option>
-    <option value="Chhattisgarh">Chhattisgarh</option>
-    <option value="Goa">Goa</option>
-    <option value="Gujarat">Gujarat</option>
-    <option value="Haryana">Haryana</option>
-    <option value="Himachal Pradesh">Himachal Pradesh</option>
-    <option value="Jharkhand">Jharkhand</option>
-    <option value="Karnataka">Karnataka</option>
-    <option value="Kerala">Kerala</option>
-    <option value="Madhya Pradesh">Madhya Pradesh</option>
-    <option value="Maharashtra">Maharashtra</option>
-    <option value="Manipur">Manipur</option>
-    <option value="Meghalaya">Meghalaya</option>
-    <option value="Mizoram">Mizoram</option>
-    <option value="Nagaland">Nagaland</option>
-    <option value="Odisha">Odisha</option>
-    <option value="Punjab">Punjab</option>
-    <option value="Rajasthan">Rajasthan</option>
-    <option value="Sikkim">Sikkim</option>
-    <option value="Tamil Nadu">Tamil Nadu</option>
-    <option value="Telangana">Telangana</option>
-    <option value="Tripura">Tripura</option>
-    <option value="Uttar Pradesh">Uttar Pradesh</option>
-    <option value="Uttarakhand">Uttarakhand</option>
-    <option value="West Bengal">West Bengal</option>
-    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-    <option value="Chandigarh">Chandigarh</option>
-    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
-    <option value="Delhi">Delhi</option>
-    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-    <option value="Ladakh">Ladakh</option>
-    <option value="Lakshadweep">Lakshadweep</option>
-    <option value="Puducherry">Puducherry</option>
-  </select>
-</div>
+                                <label for="state" class="form-label">State *</label>
+                                <select class="form-select" id="state" required>
+                                    <option selected disabled value="">Select State</option>
+                                    <option>Andhra Pradesh</option>
+                                    <option>Arunachal Pradesh</option>
+                                    <option>Assam</option>
+                                    <option>Bihar</option>
+                                    <option>Chhattisgarh</option>
+                                    <option>Goa</option>
+                                    <option>Gujarat</option>
+                                    <option>Haryana</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jharkhand</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Maharashtra</option>
+                                    <option>Manipur</option>
+                                    <option>Meghalaya</option>
+                                    <option>Mizoram</option>
+                                    <option>Nagaland</option>
+                                    <option>Odisha</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Sikkim</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Telangana</option>
+                                    <option>Tripura</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Uttarakhand</option>
+                                    <option>West Bengal</option>
+                                    <option>Andaman and Nicobar Islands</option>
+                                    <option>Chandigarh</option>
+                                    <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                                    <option>Delhi</option>
+                                    <option>Jammu and Kashmir</option>
+                                    <option>Ladakh</option>
+                                    <option>Lakshadweep</option>
+                                    <option>Puducherry</option>
+                                </select>
+                            </div>
 
                             <div class="col-md-6">
                                 <label for="referral" class="form-label">How did you hear about us? *</label>
                                 <select id="referral" class="form-select" required>
-                                    <option value="FOSSEE Website">FOSSEE Website</option>
-                                    <option value="Google">Google</option>
-                                    <option value="Social Media">Social Media</option>
-                                    <option value="Other">From Other College</option>
+                                    <option>FOSSEE Website</option>
+                                    <option>Google</option>
+                                    <option>Social Media</option>
+                                    <option>From Other College</option>
                                 </select>
                             </div>
 
+                            <!-- Submit -->
                             <div class="col-12 text-center mt-3">
                                 <button type="submit" class="btn btn-primary px-5">Register</button>
                             </div>
@@ -326,24 +334,20 @@
                     <p class="text-center mt-3">
                         Already have an account? <a href="index.html">Login</a>
                     </p>
-                    
                 </div>
             </div>
         </div>
     </div>
-    
-    
 </main>
+
+<!-- Footer -->
 <div class="footer">
-        <div class="copyright">
-            Developed by FOSSEE Group, 
-            <img src="https://fossee.in/sites/all/themes/software_responsive_theme/img/iitb-logo.png" 
-            alt="IIT Bombay Logo" class="iitb-logo">
-            IIT Bombay
-        </div>
-    </div>
+    Developed by FOSSEE Group,
+    <img src="https://fossee.in/sites/all/themes/software_responsive_theme/img/iitb-logo.png" alt="IIT Bombay Logo" class="iitb-logo">
+    IIT Bombay
+</div>
 
-
+<!-- Script -->
 <script>
 document.getElementById('registerForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -361,4 +365,3 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
 
 </body>
 </html>
-
