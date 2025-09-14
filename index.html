@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOSSEE Workshops - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
     <style>
         * {
             margin: 0;
@@ -16,21 +14,22 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: #FFF8F0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            color: #343a40;
+            color: #333333;
         }
 
+        /* Header */
         .header {
             background: #fff;
             padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-bottom: 4px solid #ff7700;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 4px solid #FF6B00;
         }
 
         .logo-container {
@@ -46,7 +45,7 @@
         .logo-text {
             font-size: 24px;
             font-weight: 700;
-            color: #ff7700;
+            color: #FF6B00;
             font-family: 'Montserrat', sans-serif;
         }
 
@@ -59,13 +58,13 @@
             color: #555;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
             font-size: 16px;
             position: relative;
+            transition: 0.3s;
         }
 
         .nav a.active {
-            color: #ff7700;
+            color: #FF6B00;
         }
 
         .nav a::after {
@@ -75,14 +74,16 @@
             left: 0;
             width: 0%;
             height: 2px;
-            background: #ff7700;
+            background: #FF6B00;
             transition: 0.3s;
         }
 
-        .nav a:hover::after, .nav a.active::after {
+        .nav a:hover::after,
+        .nav a.active::after {
             width: 100%;
         }
 
+        /* Main Container */
         .main-container {
             display: flex;
             flex: 1;
@@ -99,7 +100,7 @@
 
         .left-content h1 {
             font-size: 42px;
-            color: #ff7700;
+            color: #FF6B00;
             margin-bottom: 20px;
             font-weight: 700;
             font-family: 'Montserrat', sans-serif;
@@ -108,11 +109,12 @@
         .left-content p {
             font-size: 18px;
             line-height: 1.6;
-            color: #555;
+            color: #333333;
             margin-bottom: 30px;
             max-width: 600px;
         }
 
+        /* Features */
         .features {
             margin-top: 30px;
         }
@@ -126,15 +128,15 @@
         .feature-icon {
             width: 50px;
             height: 50px;
-            background: #fff5e6;
+            background: #FFB347;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
-            color: #ff7700;
+            color: #FF6B00;
             font-size: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
 
@@ -144,9 +146,10 @@
 
         .feature-text {
             font-size: 16px;
-            color: #555;
+            color: #333333;
         }
 
+        /* Stats */
         .stats {
             display: flex;
             gap: 20px;
@@ -158,9 +161,9 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             flex: 1;
-            border-top: 4px solid #ff7700;
+            border-top: 4px solid #FF6B00;
             transition: transform 0.3s ease;
         }
 
@@ -171,15 +174,16 @@
         .stat-number {
             font-size: 28px;
             font-weight: 700;
-            color: #ff7700;
+            color: #FF6B00;
         }
 
         .stat-label {
             font-size: 14px;
-            color: #777;
+            color: #555;
             margin-top: 5px;
         }
 
+        /* Right Content - Login */
         .right-content {
             flex: 1;
             display: flex;
@@ -191,10 +195,10 @@
             background: white;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             width: 100%;
             max-width: 450px;
-            border-top: 4px solid #ff7700;
+            border-top: 4px solid #FF6B00;
         }
 
         .login-header {
@@ -203,14 +207,14 @@
         }
 
         .login-header h2 {
-            color: #ff7700;
+            color: #FF6B00;
             font-size: 28px;
             margin-bottom: 10px;
             font-family: 'Montserrat', sans-serif;
         }
 
         .login-header p {
-            color: #777;
+            color: #555;
             font-size: 16px;
         }
 
@@ -222,7 +226,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
-            color: #555;
+            color: #333333;
         }
 
         .input-with-icon {
@@ -247,11 +251,12 @@
         }
 
         .input-with-icon input:focus {
-            border-color: #ff7700;
+            border-color: #FF6B00;
             outline: none;
-            box-shadow: 0 0 0 4px rgba(255, 119, 0, 0.15);
+            box-shadow: 0 0 0 4px rgba(255,107,0,0.15);
         }
 
+        /* Options */
         .options {
             display: flex;
             justify-content: space-between;
@@ -270,20 +275,21 @@
         }
 
         .forgot-password {
-            color: #ff7700;
+            color: #FF6B00;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .forgot-password:hover {
-            color: #e65c00;
+            color: #FF4500;
             text-decoration: underline;
         }
 
+        /* Button */
         .btn-login {
             width: 100%;
             padding: 15px;
-            background: #ff7700;
+            background: #FF6B00;
             color: white;
             border: none;
             border-radius: 8px;
@@ -291,23 +297,24 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.4s ease;
-            box-shadow: 0 4px 10px rgba(255, 119, 0, 0.4);
+            box-shadow: 0 4px 10px rgba(255,107,0,0.4);
         }
 
         .btn-login:hover {
-            background: linear-gradient(45deg, #ff7700, #e65c00);
+            background: linear-gradient(45deg, #FF6B00, #FF4500);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(230, 92, 0, 0.5);
+            box-shadow: 0 6px 15px rgba(255,69,0,0.5);
         }
 
+        /* Signup Link */
         .signup-link {
             text-align: center;
             margin-top: 25px;
-            color: #777;
+            color: #555;
         }
 
         .signup-link a {
-            color: #ff7700;
+            color: #FF6B00;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s;
@@ -317,15 +324,15 @@
             text-decoration: underline;
         }
 
+        /* Footer */
         .footer {
-            background: #f8f9fa;
+            background: #FFF8F0;
             padding: 30px 40px;
             text-align: center;
             border-top: 1px solid #dee2e6;
             margin-top: auto;
-            color: #495057;
+            color: #555;
             font-size: 14px;
-            line-height: 1.6;
         }
 
         .iitb-logo {
@@ -334,22 +341,12 @@
             vertical-align: middle;
         }
 
+        /* Responsive */
         @media (max-width: 992px) {
-            .main-container {
-                flex-direction: column;
-            }
-
-            .left-content, .right-content {
-                width: 100%;
-            }
-
-            .stats {
-                flex-wrap: wrap;
-            }
-
-            .stat {
-                flex: 1 0 calc(50% - 20px);
-            }
+            .main-container {flex-direction: column;}
+            .left-content, .right-content {width: 100%;}
+            .stats {flex-wrap: wrap;}
+            .stat {flex: 1 0 calc(50% - 20px);}
         }
 
         @media (max-width: 768px) {
@@ -358,38 +355,20 @@
                 text-align: center;
                 padding: 15px 20px;
             }
-
-            .logo-container {
-                margin-bottom: 15px;
-            }
-
-            .nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .action-buttons {
-                flex-direction: column;
-            }
+            .logo-container {margin-bottom: 15px;}
+            .nav {flex-wrap: wrap; justify-content: center;}
         }
 
         @media (max-width: 576px) {
-            .main-container {
-                padding: 20px;
-            }
-
-            .left-content h1 {
-                font-size: 32px;
-            }
-
-            .login-card {
-                padding: 30px;
-            }
+            .main-container {padding: 20px;}
+            .left-content h1 {font-size: 32px;}
+            .login-card {padding: 30px;}
         }
     </style>
 </head>
 <body>
-<div class="header">
+    <!-- Header -->
+    <div class="header">
         <div class="logo-container">
             <img src="https://fossee.in/sites/all/themes/software_responsive_theme/img/logo.png" alt="FOSSEE Logo" class="logo">
             <div class="logo-text">FOSSEE Workshops</div>
@@ -398,118 +377,108 @@
             <a href="login.html" class="active">Home</a>
             <a href="statistics.html">Workshop Statistics</a>
         </div>
-</div>
+    </div>
 
-<div class="main-container">
-    <div class="left-content">
-        <h1>Enhancing Learning Through Open Source</h1>
-        <p>FOSSEE (Free and Open Source Software for Education) promotes the use of open source tools in education and research. Join our workshops to learn from experts and enhance your skills.</p>
+    <!-- Main -->
+    <div class="main-container">
+        <!-- Left Content -->
+        <div class="left-content">
+            <h1>Enhancing Learning Through Open Source</h1>
+            <p>FOSSEE (Free and Open Source Software for Education) promotes the use of open source tools in education and research. Join our workshops to learn from experts and enhance your skills.</p>
 
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-laptop-code"></i>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="feature-text">Hands-on workshops on open source tools</div>
                 </div>
-                <div class="feature-text">Hands-on workshops on open source tools</div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="feature-text">Certification for completed workshops</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="feature-text">Expert instructors from academia and industry</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+                    <div class="feature-text">Comprehensive learning resources</div>
+                </div>
             </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-certificate"></i>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Workshops Conducted</div>
                 </div>
-                <div class="feature-text">Certification for completed workshops</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
+                <div class="stat">
+                    <div class="stat-number">25,000+</div>
+                    <div class="stat-label">Participants</div>
                 </div>
-                <div class="feature-text">Expert instructors from academia and industry</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-book-open"></i>
+                <div class="stat">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Institutions</div>
                 </div>
-                <div class="feature-text">Comprehensive learning resources</div>
             </div>
         </div>
 
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Workshops Conducted</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">25,000+</div>
-                <div class="stat-label">Participants</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">Institutions</div>
+        <!-- Right Content (Login) -->
+        <div class="right-content">
+            <div class="login-card">
+                <div class="login-header">
+                    <h2>Login to Your Account</h2>
+                    <p>Access workshop materials and resources</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" placeholder="Enter your username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                </div>
+
+                <div class="options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="forgotpass.html" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button class="btn-login">Sign In</button>
+
+                <div class="signup-link">
+                    <p>New around here? <a href="registration.html">Sign up for an account</a></p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="right-content">
-        <div class="login-card">
-            <div class="login-header">
-                <h2>Login to Your Account</h2>
-                <p>Access workshop materials and resources</p>
-            </div>
-
-            <div class="form-group">
-                <label for="username">Username</label>
-                <div class="input-with-icon">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="username" placeholder="Enter your username">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <div class="input-with-icon">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="password" placeholder="Enter your password">
-                </div>
-            </div>
-
-            <div class="options">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember me</label>
-                </div>
-                <a href="forgotpass.html" class="forgot-password">Forgot password?</a>
-            </div>
-
-            <button class="btn-login">Sign In</button>
-
-            <div class="signup-link">
-                <p>New around here? <a href="registration.html">Sign up for an account</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="footer">
-    <div class="copyright">
-        Developed by FOSSEE Group, 
-        <img src="https://fossee.in/sites/all/themes/software_responsive_theme/img/iitb-logo.png" 
-        alt="IIT Bombay Logo" class="iitb-logo">
+    <!-- Footer -->
+    <div class="footer">
+        Developed by FOSSEE Group,
+        <img src="https://fossee.in/sites/all/themes/software_responsive_theme/img/iitb-logo.png" alt="IIT Bombay Logo" class="iitb-logo">
         IIT Bombay
     </div>
-</div>
 
-<script>
-    // Simple form validation
-    document.querySelector('.btn-login').addEventListener('click', () => {
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        if (!username || !password) {
-            alert('Please fill in all fields');
-            return;
-        }
-
-        alert('Login successful! Redirecting to dashboard...');
-    });
-</script>
+    <script>
+        document.querySelector('.btn-login').addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if(!username || !password){
+                alert('Please fill in all fields');
+                return;
+            }
+            alert('Login successful! Redirecting to dashboard...');
+        });
+    </script>
 </body>
 </html>
