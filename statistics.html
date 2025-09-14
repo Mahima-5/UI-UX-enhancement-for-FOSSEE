@@ -15,11 +15,11 @@
         }
         
         body {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: #FFF8F0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            color: #333;
+            color: #333333;
         }
         
         .header {
@@ -29,7 +29,7 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-bottom: 4px solid #ff7700;
+            border-bottom: 4px solid #FF6B00;
         }
         
         .logo-container {
@@ -45,7 +45,7 @@
         .logo-text {
             font-size: 24px;
             font-weight: 700;
-            color: #ff7700;
+            color: #FF6B00;
         }
         
         .nav {
@@ -59,15 +59,31 @@
             font-weight: 500;
             transition: color 0.3s;
             font-size: 16px;
+            position: relative;
         }
         
         .nav a:hover {
-            color: #ff7700;
+            color: #FF6B00;
         }
         
         .nav a.active {
-            color: #ff7700;
-            border-bottom: 2px solid #ff7700;
+            color: #FF6B00;
+        }
+        
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #FF6B00;
+            transition: 0.3s;
+        }
+        
+        .nav a:hover::after,
+        .nav a.active::after {
+            width: 100%;
         }
         
         .main-container {
@@ -92,7 +108,7 @@
         }
         
         .page-title {
-            color: #ff7700;
+            color: #FF6B00;
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 10px;
@@ -103,12 +119,12 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid #ff7700;
+            border-top: 4px solid #FF6B00;
         }
         
         .section-title {
             font-size: 20px;
-            color: #ff7700;
+            color: #FF6B00;
             margin-bottom: 20px;
             font-weight: 600;
         }
@@ -127,7 +143,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
-            color: #555;
+            color: #333333;
         }
         
         .filter-input {
@@ -140,9 +156,9 @@
         }
         
         .filter-input:focus {
-            border-color: #ff7700;
+            border-color: #FF6B00;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 119, 0, 0.2);
+            box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.2);
         }
         
         .date-range {
@@ -176,7 +192,7 @@
         }
         
         .btn-primary {
-            background: #ff7700;
+            background: #FF6B00;
             color: white;
         }
         
@@ -202,7 +218,7 @@
         .chart-btn {
             padding: 15px;
             background: #fff5e6;
-            border: 2px solid #ff7700;
+            border: 2px solid #FF6B00;
             border-radius: 8px;
             font-size: 16px;
             font-weight: 600;
@@ -211,11 +227,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            color: #ff7700;
+            color: #FF6B00;
         }
         
         .chart-btn:hover {
-            background: #ff7700;
+            background: #FF6B00;
             color: white;
         }
         
@@ -235,11 +251,11 @@
         
         .data-table th {
             background-color: #fff5e6;
-            color: #ff7700;
+            color: #FF6B00;
             font-weight: 600;
             text-align: left;
             padding: 15px;
-            border-bottom: 2px solid #ff7700;
+            border-bottom: 2px solid #FF6B00;
         }
         
         .data-table td {
@@ -268,15 +284,15 @@
         }
         
         .pagination-btn:hover {
-            background: #ff7700;
+            background: #FF6B00;
             color: white;
-            border-color: #ff7700;
+            border-color: #FF6B00;
         }
         
         .pagination-btn.active {
-            background: #ff7700;
+            background: #FF6B00;
             color: white;
-            border-color: #ff7700;
+            border-color: #FF6B00;
         }
         
         .modal {
@@ -314,7 +330,7 @@
         }
         
         .close-modal:hover {
-            color: #ff7700;
+            color: #FF6B00;
         }
         
         .chart-container {
@@ -324,7 +340,7 @@
         }
         
         .footer {
-            background: #f8f9fa;
+            background: #FFF8F0;
             padding: 30px 40px;
             text-align: center;
             border-top: 1px solid #dee2e6;
@@ -615,7 +631,7 @@
                 alert('Filters reset!');
             });
             
-            // Download CSV button
+            // Download button
             const downloadButton = document.querySelectorAll('.btn-primary')[1];
             downloadButton.addEventListener('click', function() {
                 alert('Downloading data as CSV... In a real application, this would download the data.');
