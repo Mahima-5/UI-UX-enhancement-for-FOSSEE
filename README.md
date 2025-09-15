@@ -38,11 +38,11 @@ The most challenging part was achieving **balance between aesthetics and simplic
 
 ### Before (Outdated UI)
 
-![Before Screenshot](/mnt/data/b1d80e93-7670-4e46-8c44-aa17d3534f70.png)
+Before Screenshot
 
 ### After (Modernized UI)
 
-![After Screenshot](/mnt/data/49dc095d-eb74-4266-a5be-19e4daeca184.jpeg)
+After Screenshot
 
 Or check out the **[Live Demo](https://mahima-5.github.io/UI-UX-enhancement-for-FOSSEE/)**.
 
